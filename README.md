@@ -14,15 +14,16 @@
 
 ```bash
 set -e
-git init blog
+hexo init blog
 cd blog
 npm install --save hexo-theme-fluid
-wget https://github.com/zengls3186428803/hexo-theme-fluid/blob/master/_config.yml -O _config.fluid.yml
+wget https://raw.githubusercontent.com/zengls3186428803/hexo-theme-fluid/refs/heads/master/_config.yml -O _config.fluid.yml
 pip install ruamel.yaml fire
+wget https://raw.githubusercontent.com/zengls3186428803/hexo-theme-fluid/refs/heads/master/yaml_utils.py -O yaml_utils.py
 python yaml_utils.py _config.yml theme "fluid"
 python yaml_utils.py _config.yml language: "zh-CN"
 python yaml_utils.py _config.fluid.yml post.math.enable True
-yay -S pandoc-cli
+yay -S pandoc-cli --noconfirm
 npm uninstall hexo-renderer-marked --save
 npm install hexo-renderer-pandoc --save
 ```
