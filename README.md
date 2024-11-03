@@ -21,7 +21,7 @@ wget https://raw.githubusercontent.com/zengls3186428803/hexo-theme-fluid/refs/he
 pip install ruamel.yaml fire
 wget https://raw.githubusercontent.com/zengls3186428803/hexo-theme-fluid/refs/heads/master/yaml_utils.py -O yaml_utils.py
 python yaml_utils.py _config.yml theme "fluid"
-python yaml_utils.py _config.yml language: "zh-CN"
+python yaml_utils.py _config.yml language "zh-CN"
 python yaml_utils.py _config.fluid.yml post.math.enable True
 yay -S pandoc-cli --noconfirm
 npm uninstall hexo-renderer-marked --save
